@@ -1,0 +1,110 @@
+# Reading pref.tcl
+# do anti_shatter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/Train_proj/labyba_3_5_antidrebezg {E:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:07:47 on Oct 23,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Train_proj/labyba_3_5_antidrebezg" E:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv 
+# -- Compiling module debounce_counter
+# 
+# Top level modules:
+# 	debounce_counter
+# End time: 15:07:48 on Oct 23,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/Train_proj/labyba_3_5_antidrebezg {E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:07:48 on Oct 23,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Train_proj/labyba_3_5_antidrebezg" E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv 
+# -- Compiling module debounce_tb
+# 
+# Top level modules:
+# 	debounce_tb
+# End time: 15:07:48 on Oct 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  debounce_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" debounce_tb 
+# Start time: 15:07:48 on Oct 23,2025
+# Loading sv_std.std
+# Loading work.debounce_tb
+# Loading work.debounce_counter
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time:                    0, button_in: 0, button_out: 0, counter:  0
+# Time:                   30, button_in: 0, button_out: 0, counter:  1
+# Time:                   40, button_in: 1, button_out: 0, counter:  1
+# Time:                   50, button_in: 0, button_out: 0, counter:  2
+# Time:                   70, button_in: 0, button_out: 0, counter:  3
+# Time:                   90, button_in: 0, button_out: 0, counter:  4
+# Time:                  100, button_in: 1, button_out: 0, counter:  4
+# Time:                  110, button_in: 1, button_out: 0, counter:  5
+# Time:                  130, button_in: 0, button_out: 0, counter:  0
+# Time:                  170, button_in: 0, button_out: 0, counter:  1
+# Time:                  190, button_in: 0, button_out: 0, counter:  2
+# Time:                  210, button_in: 0, button_out: 0, counter:  3
+# Time:                  220, button_in: 1, button_out: 0, counter:  3
+# Time:                  230, button_in: 1, button_out: 0, counter:  4
+# Time:                  250, button_in: 1, button_out: 0, counter:  0
+# Time:                  270, button_in: 1, button_out: 0, counter:  1
+# Time:                  290, button_in: 1, button_out: 0, counter:  2
+# Time:                  310, button_in: 1, button_out: 0, counter:  3
+# Time:                  330, button_in: 1, button_out: 0, counter:  4
+# Time:                  350, button_in: 1, button_out: 0, counter:  5
+# Time:                  370, button_in: 1, button_out: 0, counter:  6
+# Time:                  390, button_in: 1, button_out: 0, counter:  7
+# Time:                  410, button_in: 1, button_out: 0, counter:  8
+# Time:                  430, button_in: 1, button_out: 0, counter:  9
+# Time:                  450, button_in: 1, button_out: 0, counter: 10
+# Time:                  470, button_in: 1, button_out: 0, counter: 11
+# Time:                  490, button_in: 1, button_out: 0, counter: 12
+# Time:                  510, button_in: 1, button_out: 0, counter: 13
+# Time:                  530, button_in: 1, button_out: 0, counter: 14
+# Time:                  550, button_in: 1, button_out: 0, counter: 15
+# Time:                  570, button_in: 1, button_out: 1, counter: 15
+# Time:                  720, button_in: 0, button_out: 1, counter: 15
+# Time:                  750, button_in: 0, button_out: 1, counter:  0
+# Time:                  770, button_in: 0, button_out: 1, counter:  1
+# Time:                  790, button_in: 0, button_out: 1, counter:  2
+# Time:                  810, button_in: 0, button_out: 1, counter:  3
+# Time:                  820, button_in: 1, button_out: 1, counter:  3
+# Time:                  830, button_in: 1, button_out: 1, counter:  4
+# Time:                  850, button_in: 1, button_out: 1, counter:  0
+# Time:                  870, button_in: 0, button_out: 1, counter:  1
+# Time:                  890, button_in: 0, button_out: 1, counter:  0
+# Time:                  910, button_in: 0, button_out: 1, counter:  1
+# Time:                  930, button_in: 0, button_out: 1, counter:  2
+# Time:                  950, button_in: 0, button_out: 1, counter:  3
+# Time:                  970, button_in: 0, button_out: 1, counter:  4
+# Time:                  990, button_in: 0, button_out: 1, counter:  5
+# Time:                 1010, button_in: 0, button_out: 1, counter:  6
+# Time:                 1030, button_in: 0, button_out: 1, counter:  7
+# Time:                 1050, button_in: 0, button_out: 1, counter:  8
+# Time:                 1070, button_in: 0, button_out: 1, counter:  9
+# Time:                 1090, button_in: 0, button_out: 1, counter: 10
+# Time:                 1110, button_in: 0, button_out: 1, counter: 11
+# Time:                 1130, button_in: 0, button_out: 1, counter: 12
+# Time:                 1150, button_in: 0, button_out: 1, counter: 13
+# Time:                 1170, button_in: 0, button_out: 1, counter: 14
+# Time:                 1190, button_in: 0, button_out: 1, counter: 15
+# Time:                 1210, button_in: 0, button_out: 0, counter: 15
+# ** Note: $finish    : E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv(56)
+#    Time: 1370 ps  Iteration: 0  Instance: /debounce_tb
+# 1
+# Break in Module debounce_tb at E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv line 56
+# End time: 15:16:40 on Oct 23,2025, Elapsed time: 0:08:52
+# Errors: 0, Warnings: 0

@@ -1,0 +1,165 @@
+module pwm_controller (
+	input logic clk, 
+	input logic rst, 
+	input logic btn_up, // Кнопка увеличения яркости
+	input logic btn_down, // Кнопка уменьшения яркости
+	output logic pwm_out // сигнал для светодиода
+);
+
+parameter CLK_FREQ = 50_000_000; // Частота тактового сигнала в Гц
+parameter PWM_FREQ = 1_000; // Частота ШИМ (1 кГц)
+parameter COUNTER_MAX = CLK_FREQ / PWM_FREQ;
+
+logic [15:0] counter;            // Счетчик для генерации периода ШИМ
+logic [3:0]  duty_cycle_index;   // Индекс текущей скважности (0-8)
+logic [15:0] duty_cycle_value;   // Текущее значение скважности
+logic        btn_up_debounced;   // Кнопка вверх после антидребезга
+logic        btn_down_debounced; // Кнопка вниз после антидребезга
+logic        btn_up_prev;        // Предыдущее состояние кнопки вверх
+logic        btn_down_prev;      // Предыдущее состояние кнопки вниз
+logic [15:0] duty_cycles [0:8];  // Массив значений скважности для 10%-90% с шагом 10%
+
+// Инициализация массива значений скважности
+initial begin
+  duty_cycles[0] = (COUNTER_MAX * 10) / 100;  // 10%
+  duty_cycles[1] = (COUNTER_MAX * 20) / 100;  // 20%
+  duty_cycles[2] = (COUNTER_MAX * 30) / 100;  // 30%
+  duty_cycles[3] = (COUNTER_MAX * 40) / 100;  // 40%
+  duty_cycles[4] = (COUNTER_MAX * 50) / 100;  // 50%
+  duty_cycles[5] = (COUNTER_MAX * 60) / 100;  // 60%
+  duty_cycles[6] = (COUNTER_MAX * 70) / 100;  // 70%
+  duty_cycles[7] = (COUNTER_MAX * 80) / 100;  // 80%
+  duty_cycles[8] = (COUNTER_MAX * 90) / 100;  // 90%
+end
+
+ // Модули антидребезга для кнопок
+    debounce_counter #(
+        .COUNTER_WIDTH(16),           // 16-битный счетчик
+        .COUNTER_MAX(50_000)          // ~1 ms при 50 MHz
+    ) debounce_up (
+        .clk(clk),
+        .rst_n(~rst),                 // Инвертируем для активного высокого сброса
+        .button_in(btn_up),
+        .button_out(btn_up_debounced)
+    );
+    
+    debounce_counter #(
+        .COUNTER_WIDTH(16),
+        .COUNTER_MAX(50_000)          // ~1 ms при 50 MHz
+    ) debounce_down (
+        .clk(clk),
+        .rst_n(~rst),                 // Инвертируем для активного высокого сброса
+        .button_in(btn_down),
+        .button_out(btn_down_debounced)
+    );
+    
+    // Регистрация предыдущих состояний для обнаружения фронтов
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            btn_up_prev <= 1'b0;
+            btn_down_prev <= 1'b0;
+        end else begin
+            btn_up_prev <= btn_up_debounced;
+            btn_down_prev <= btn_down_debounced;
+        end
+    end
+    
+    // Обработка нажатий кнопок и изменение скважности
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            duty_cycle_index <= 4'd4;  // Начальное значение 50%
+            duty_cycle_value <= duty_cycles[4];
+        end else begin
+            // Обновляем текущее значение скважности из массива
+            duty_cycle_value <= duty_cycles[duty_cycle_index];
+            
+            // Обработка кнопки увеличения яркости (обнаружение фронта)
+            if (btn_up_debounced && !btn_up_prev) begin
+                if (duty_cycle_index < 4'd8) begin
+                    duty_cycle_index <= duty_cycle_index + 4'd1;
+                end
+            end
+            
+            // Обработка кнопки уменьшения яркости (обнаружение фронта)
+            if (btn_down_debounced && !btn_down_prev) begin
+                if (duty_cycle_index > 4'd0) begin
+                    duty_cycle_index <= duty_cycle_index - 4'd1;
+                end
+            end
+        end
+    end
+    
+    // Счетчик для генерации периода ШИМ
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            counter <= 16'b0;
+        end else begin
+            if (counter >= COUNTER_MAX - 1) begin
+                counter <= 16'b0;
+            end else begin
+                counter <= counter + 16'b1;
+            end
+        end
+    end
+    
+    // Генерация ШИМ сигнала
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            pwm_out <= 1'b0;
+        end else begin
+            // Сигнал HIGH когда счетчик меньше значения скважности
+            if (counter < duty_cycle_value) begin
+                pwm_out <= 1'b1;
+            end else begin
+                pwm_out <= 1'b0;
+            end
+        end
+    end
+
+endmodule
+
+// Модуль антидребезга контактов
+module debounce_counter
+#(
+    parameter COUNTER_WIDTH = 16,
+    parameter COUNTER_MAX   = 50_000    // 1 ms при 50 MHz
+)(
+    input  logic clk,
+    input  logic rst_n,
+    input  logic button_in,
+    output logic button_out
+);
+
+    logic [COUNTER_WIDTH-1:0] counter;
+    logic button_sync;
+    logic button_sync_delayed;
+    
+    // Двухстадийная синхронизация и задержка
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            button_sync <= 1'b0;
+            button_sync_delayed <= 1'b0;
+        end else begin
+            button_sync <= button_in;
+            button_sync_delayed <= button_sync;  // Задержанная версия
+        end
+    end
+    
+    // Логика антидребезга
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            counter <= '0;
+            button_out <= 1'b0;
+        end else begin
+            // Сравниваем текущее и задержанное значение
+            if (button_sync != button_sync_delayed) begin
+                counter <= '0;  // Сброс при изменении
+            end else if (counter >= COUNTER_MAX) begin
+                button_out <= button_sync;  // Фиксация стабильного состояния
+            end else begin
+                counter <= counter + 1;  // Инкремент счетчика
+            end
+        end
+    end
+
+endmodule

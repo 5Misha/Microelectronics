@@ -1,0 +1,21 @@
+module priority_encoder_case(x, y, f);
+
+input logic [7:0] x;
+output logic [2:0] y;
+output f;
+
+always_comb begin
+    casex (x)  // casex для приоритетного кодирования
+        8'b1xxxxxxx: begin y = 3'b111; valid = 1'b1; end
+        8'b01xxxxxx: begin y = 3'b110; valid = 1'b1; end
+        8'b001xxxxx: begin y = 3'b101; valid = 1'b1; end
+        8'b0001xxxx: begin y = 3'b100; valid = 1'b1; end
+        8'b00001xxx: begin y = 3'b011; valid = 1'b1; end
+        8'b000001xx: begin y = 3'b010; valid = 1'b1; end
+        8'b0000001x: begin y = 3'b001; valid = 1'b1; end
+        8'b00000001: begin y = 3'b000; valid = 1'b1; end
+        default:     begin y = 3'b000; valid = 1'b0; end
+    endcase
+end
+
+endmodule

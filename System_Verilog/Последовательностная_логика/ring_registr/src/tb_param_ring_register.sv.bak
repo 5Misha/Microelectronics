@@ -1,0 +1,121 @@
+module tb_param_ring_register;
+
+parameter N = 69;
+
+logic clk_t, rst_t;
+logic [1:0] mode_t;
+logic [N-1:0] data_in_t;
+logic [N-1:0] data_out_t;
+
+ param_ring_register #(.N(69)) DUT(
+	  .clk(clk_t),
+	  .rst(rst_t),
+	  .mode(mode_t),
+	  .data_in(data_in_t),
+	  .data_out(data_out_t)
+ );
+
+ // Генератор тактового сигнала
+    initial begin
+        clk_t = 0;
+        forever #5 clk_t = ~clk_t;  // Период 10 единиц времени
+    end
+    
+    // Основной тестовый процесс
+    initial begin
+        // Инициализация
+        rst_t = 1;
+        mode_t = 2'b00;
+        data_in_t = 0;
+        
+        // Сброс
+        #20;
+        rst_t = 0;
+        #10;
+        
+        $display("=== Начало тестирования параметрического регистра с N=%0d ===", N);
+        $display("Время | Режим | Входные данные | Выходные данные");
+        $display("--------------------------------------------------");
+        
+        // Тест 1: Загрузка начального значения
+        $display("\nТест 1: Загрузка начального значения");
+        data_in_t = 69'h1A5A5A5A5A5A5A5A5A5;  // Произвольное значение
+        mode_t = 2'b11;  // Режим загрузки
+        #10;
+        $display("%0t | LOAD  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 2: Хранение данных
+        $display("\nТест 2: Режим хранения");
+        mode_t = 2'b00;  // Режим хранения
+        #30;
+        $display("%0t | HOLD  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 3: Кольцевой сдвиг влево на 1 позицию
+        $display("\nТест 3: Кольцевой сдвиг влево на 1 позицию");
+        mode_t = 2'b01;  // Сдвиг влево
+        #10;
+        $display("%0t | LEFT  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 4: Кольцевой сдвиг влево на 3 позиции
+        $display("\nТест 4: Кольцевой сдвиг влево на 3 позиции");
+        repeat(3) #10;
+        $display("%0t | LEFT  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 5: Кольцевой сдвиг вправо на 2 позиции
+        $display("\nТест 5: Кольцевой сдвиг вправо на 2 позиции");
+        mode_t = 2'b10;  // Сдвиг вправо
+        repeat(2) #10;
+        $display("%0t | RIGHT | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 6: Полный цикл сдвига влево (N раз)
+        $display("\nТест 6: Полный цикл сдвига влево (%0d тактов)", N);
+        mode_t = 2'b01;  // Сдвиг влево
+        repeat(N) #10;
+        $display("%0t | LEFT  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 7: Загрузка нового значения
+        $display("\nТест 7: Загрузка нового значения");
+        data_in_t = 69'h123456789ABCDEF;  // Новое значение
+        mode_t = 2'b11;  // Режим загрузки
+        #10;
+        $display("%0t | LOAD  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 8: Сдвиг вправо и проверка кольцевого характера
+        $display("\nТест 8: Серия сдвигов вправо");
+        mode_t = 2'b10;  // Сдвиг вправо
+        repeat(5) #10;
+        $display("%0t | RIGHT | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 9: Возврат в режим хранения
+        $display("\nТест 9: Режим хранения после операций");
+        mode_t = 2'b00;  // Хранение
+        #30;
+        $display("%0t | HOLD  | %h | %h", $time, data_in_t, data_out_t);
+        
+        // Тест 10: Сброс во время работы
+        $display("\nТест 10: Сброс во время работы");
+        mode_t = 2'b01;  // Сдвиг влево
+        #10;
+        rst_t = 1;       // Активный сброс
+        #10;
+        $display("%0t | RESET | %h | %h", $time, data_in_t, data_out_t);
+        rst_t = 0;
+        #10;
+        
+        $display("\n=== Тестирование завершено успешно ===");
+        $finish;
+    end
+    
+    // Мониторинг изменений в реальном времени
+    always @(posedge clk_t) begin
+        if (!rst_t) begin  // Только когда нет сброса
+            case (mode_t)
+                2'b00: $display("%0t | HOLD  | %h | %h", $time, data_in_t, data_out_t);
+                2'b01: $display("%0t | LEFT  | %h | %h", $time, data_in_t, data_out_t);
+                2'b10: $display("%0t | RIGHT | %h | %h", $time, data_in_t, data_out_t);
+                2'b11: $display("%0t | LOAD  | %h | %h", $time, data_in_t, data_out_t);
+            endcase
+        end
+    end
+
+endmodule

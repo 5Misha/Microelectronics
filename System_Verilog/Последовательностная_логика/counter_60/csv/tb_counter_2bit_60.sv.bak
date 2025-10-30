@@ -1,0 +1,38 @@
+`timescale 1ns / 1ps
+
+module tb_counter_2bit_60;
+
+logic clk_t, _rst_t;
+logic [7:0] Q_t;
+
+top DUT ( .clk(clk_t), ._rst(_rst_t), .Q(Q_t) );
+
+// Генератор тактового сигнала
+initial begin
+    clk_t = 0;
+    forever #5 clk_t = ~clk_t;
+end
+
+// Тестовые воздействия
+initial begin
+    // Инициализация и сброс
+    _rst_t = 0;
+    #20 _rst_t = 1;
+    
+    $display("Time\tTens\tUnits\tTotal");
+    $monitor("%0d\t%0d\t%0d\t%0d", $time, Q_t[7:4], Q_t[3:0], {Q_t[7:4], Q_t[3:0]});
+
+    // Ждем полный цикл счета (0-59) + немного больше
+    #650;
+    
+    // Еще один сброс
+    _rst_t = 0;
+    #20 _rst_t = 1;
+    $display("\n--- Reset applied ---");
+    
+    // Ждем еще немного
+    #200;
+    
+    $display("Simulation completed");
+    $finish;
+end

@@ -1,0 +1,41 @@
+module div_50M_1 (
+    input  logic clk_50M,      // Входной сигнал 50 МГц
+    input  logic rst_n,        // Сброс (активный 0)
+    output logic clk_1,        // Выходной сигнал 1 Гц
+    output logic clk_1_posedge // Флаг положительного фронта clk_1
+);
+
+    // Параметры для гибкости
+    parameter INPUT_FREQ  = 50_000_000; // Входная частота 50 МГц
+    parameter OUTPUT_FREQ = 1;          // Выходная частота 1 Гц
+    
+    // Расчет количества тактов для деления
+    localparam COUNTER_MAX = INPUT_FREQ / OUTPUT_FREQ - 1;
+    localparam COUNTER_WIDTH = $clog2(COUNTER_MAX + 1);
+    
+    // Внутренние сигналы
+    logic [COUNTER_WIDTH-1:0] counter;
+    logic clk_1_prev;          // Предыдущее значение clk_1
+    
+    // Счетчик для деления частоты
+    always_ff @(posedge clk_50M or negedge rst_n) begin
+        if (!rst_n) begin
+            counter <= '0;
+            clk_1 <= 1'b0;
+            clk_1_prev <= 1'b0;
+        end else begin
+            clk_1_prev <= clk_1;  // Запоминаем предыдущее значение
+            
+            if (counter == COUNTER_MAX) begin
+                counter <= '0;
+                clk_1 <= ~clk_1;  // Инвертируем выходной сигнал
+            end else begin
+                counter <= counter + 1;
+            end
+        end
+    end
+    
+    // Детектор положительного фронта clk_1
+    assign clk_1_posedge = clk_1 && !clk_1_prev;
+
+endmodule

@@ -1,0 +1,47 @@
+module debounce_counter
+#(
+    parameter COUNTER_WIDTH = 16,      // Разрядность счетчика
+    parameter COUNTER_MAX   = 50000    // Максимальное значение счетчика
+)(
+    input  logic clk,        // Тактовый сигнал
+    input  logic rst_n,      // Сброс (активный 0)
+    input  logic button_in,  // Входной сигнал с дребезгом
+    output logic button_out  // Выходной стабильный сигнал
+);
+
+    logic [COUNTER_WIDTH-1:0] counter;
+    logic button_prev;
+    logic button_sync;
+    
+    // Синхронизация асинхронного входа
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            button_sync <= 1'b0;
+        end else begin
+            button_sync <= button_in;
+        end
+    end
+    
+    // Логика антидребезга
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            counter <= '0;
+            button_prev <= 1'b0;
+            button_out <= 1'b0;
+        end else begin
+            button_prev <= button_sync;
+            
+            if (button_sync != button_prev) begin
+                // Сброс счетчика при изменении состояния
+                counter <= '0;
+            end else if (counter == COUNTER_MAX) begin
+                // Фиксация стабильного состояния
+                button_out <= button_sync;
+            end else begin
+                // Инкремент счетчика
+                counter <= counter + 1;
+            end
+        end
+    end
+
+endmodule

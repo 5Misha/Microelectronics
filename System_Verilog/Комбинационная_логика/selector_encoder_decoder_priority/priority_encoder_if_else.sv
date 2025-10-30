@@ -1,0 +1,19 @@
+module priority_encoder_if_else(x, y, f);
+
+input logic [7:0] x;
+output logic [2:0] y;
+output logic       f;
+
+always_comb begin
+    if (x[7])       begin y = 3'b111; f = 1'b1; end
+    else if (x[6])  begin y = 3'b110; f = 1'b1; end
+    else if (x[5])  begin y = 3'b101; f = 1'b1; end
+    else if (x[4])  begin y = 3'b100; f = 1'b1; end
+    else if (x[3])  begin y = 3'b011; f = 1'b1; end
+    else if (x[2])  begin y = 3'b010; f = 1'b1; end
+    else if (x[1])  begin y = 3'b001; f = 1'b1; end
+    else if (x[0])  begin y = 3'b000; f = 1'b1; end
+    else            begin y = 3'b000; f = 1'b0; end
+end
+
+endmodule

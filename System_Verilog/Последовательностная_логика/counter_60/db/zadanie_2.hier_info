@@ -1,0 +1,58 @@
+|top
+clk => clk.IN1
+_rst => _rst.IN1
+Q[0] << counter_2bit_60:DUT.Q
+Q[1] << counter_2bit_60:DUT.Q
+Q[2] << counter_2bit_60:DUT.Q
+Q[3] << counter_2bit_60:DUT.Q
+Q[4] << counter_2bit_60:DUT.Q
+Q[5] << counter_2bit_60:DUT.Q
+Q[6] << counter_2bit_60:DUT.Q
+Q[7] << counter_2bit_60:DUT.Q
+
+
+|top|counter_2bit_60:DUT
+clk => clk.IN1
+_rst => _rst.IN2
+Q[0] <= counter_1bit:units_counter.Q
+Q[1] <= counter_1bit:units_counter.Q
+Q[2] <= counter_1bit:units_counter.Q
+Q[3] <= counter_1bit:units_counter.Q
+Q[4] <= counter_1bit:tens_counter.Q
+Q[5] <= counter_1bit:tens_counter.Q
+Q[6] <= counter_1bit:tens_counter.Q
+Q[7] <= counter_1bit:tens_counter.Q
+
+
+|top|counter_2bit_60:DUT|counter_1bit:units_counter
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+_rst => Q[0]~reg0.ACLR
+_rst => Q[1]~reg0.ACLR
+_rst => Q[2]~reg0.ACLR
+_rst => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|counter_2bit_60:DUT|counter_1bit:tens_counter
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+_rst => Q[0]~reg0.ACLR
+_rst => Q[1]~reg0.ACLR
+_rst => Q[2]~reg0.ACLR
+_rst => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

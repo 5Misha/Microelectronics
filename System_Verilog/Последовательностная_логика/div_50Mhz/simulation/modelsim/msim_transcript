@@ -1,0 +1,283 @@
+# Reading pref.tcl
+# do DIV_50Mhz_1hz_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_3_div_50Mhz {G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:25:46 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_3_div_50Mhz" G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv 
+# -- Compiling module div_50M_1
+# 
+# Top level modules:
+# 	div_50M_1
+# End time: 12:25:46 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_3_div_50Mhz {G:/Train_proj/labyba_3_3_div_50Mhz/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:25:46 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_3_div_50Mhz" G:/Train_proj/labyba_3_3_div_50Mhz/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:25:46 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_3_div_50Mhz/src {G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:25:46 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_3_div_50Mhz/src" G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv 
+# -- Compiling module tb_freq_divider
+# 
+# Top level modules:
+# 	tb_freq_divider
+# End time: 12:25:46 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_freq_divider
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_freq_divider 
+# Start time: 12:25:46 on Oct 27,2025
+# Loading sv_std.std
+# Loading work.tb_freq_divider
+# Loading work.div_50M_1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time:    0 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:    5 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   10 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   15 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   20 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   25 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   30 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   35 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   40 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   45 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   50 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   55 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   60 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   65 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   70 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   75 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   80 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   85 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   90 ns | clk_in: 0 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:   95 ns | clk_in: 1 | nrst: 0 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  100 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  105 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  110 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  115 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  120 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  125 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  130 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  135 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  140 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  145 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  150 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  155 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  160 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  165 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  170 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  175 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  180 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  185 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  190 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  195 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  200 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  205 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  210 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  215 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  220 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  225 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  230 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  235 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  240 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  245 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  250 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  255 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  260 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  265 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  270 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  275 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  280 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  285 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  290 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  295 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  300 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  305 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  310 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  315 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  320 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  325 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  330 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  335 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  340 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  345 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  350 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  355 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  360 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  365 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  370 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  375 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  380 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  385 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  390 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  395 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  400 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  405 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  410 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  415 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  420 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  425 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  430 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  435 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  440 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  445 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  450 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  455 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  460 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  465 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  470 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  475 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  480 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  485 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  490 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  495 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  500 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  505 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  510 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  515 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  520 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  525 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  530 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  535 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  540 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  545 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  550 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  555 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  560 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  565 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  570 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  575 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  580 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  585 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  590 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  595 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  600 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  605 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  610 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  615 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  620 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  625 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  630 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  635 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  640 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  645 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  650 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  655 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  660 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  665 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  670 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  675 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  680 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  685 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  690 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  695 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  700 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  705 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  710 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  715 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  720 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  725 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  730 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  735 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  740 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  745 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  750 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  755 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  760 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  765 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  770 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  775 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  780 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  785 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  790 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  795 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  800 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  805 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  810 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  815 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  820 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  825 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  830 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  835 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  840 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time:  845 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  850 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time:  855 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  860 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time:  865 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  870 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time:  875 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  880 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time:  885 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  890 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time:  895 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  900 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time:  905 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  910 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time:  915 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  920 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time:  925 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  930 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time:  935 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  940 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# Time:  945 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  950 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  5
+# Time:  955 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  960 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  6
+# Time:  965 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  970 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  7
+# Time:  975 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  980 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 1 | cnt:  0
+# Time:  985 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  990 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  1
+# Time:  995 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time: 1000 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  2
+# Time: 1005 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time: 1010 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  3
+# Time: 1015 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time: 1020 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  4
+# Time: 1025 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time: 1030 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  5
+# Time: 1035 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time: 1040 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  6
+# Time: 1045 ns | clk_in: 1 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time: 1050 ns | clk_in: 0 | nrst: 1 | clk_out: 1 | flag_out: 0 | cnt:  7
+# Time: 1055 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time: 1060 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  0
+# Time: 1065 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time: 1070 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  1
+# Time: 1075 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time: 1080 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  2
+# Time: 1085 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time: 1090 ns | clk_in: 0 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  3
+# Time: 1095 ns | clk_in: 1 | nrst: 1 | clk_out: 0 | flag_out: 0 | cnt:  4
+# ** Note: $finish    : G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv(27)
+#    Time: 1100 ps  Iteration: 0  Instance: /tb_freq_divider
+# 1
+# Break in Module tb_freq_divider at G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv line 27
+# End time: 12:30:51 on Oct 27,2025, Elapsed time: 0:05:05
+# Errors: 0, Warnings: 0

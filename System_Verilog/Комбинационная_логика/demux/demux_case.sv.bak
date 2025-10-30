@@ -1,0 +1,19 @@
+module demux_case (
+	input logic [15:0] x,
+	input logic [1:0] s,
+	output logic [15:0] y
+); 
+
+always_comb begin
+	y1 = 16'h0000;
+	y2 = 16'h0000;
+	y3 = 16'h0000;
+
+	case(s)
+		2'b00 : y1 = x;
+		2'b01 : y2 = x;
+		2'b10 : y3 = x;
+	endcase
+end
+
+endmodule

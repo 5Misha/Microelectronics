@@ -1,0 +1,90 @@
+# Reading pref.tcl
+# do ring_register_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_4 {G:/Train_proj/labyba_3_4/param_ring_register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:52:29 on Oct 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_4" G:/Train_proj/labyba_3_4/param_ring_register.sv 
+# -- Compiling module param_ring_register
+# 
+# Top level modules:
+# 	param_ring_register
+# End time: 21:52:30 on Oct 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_4 {G:/Train_proj/labyba_3_4/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:52:30 on Oct 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_4" G:/Train_proj/labyba_3_4/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 21:52:30 on Oct 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_4/src {G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:52:30 on Oct 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_4/src" G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv 
+# -- Compiling module tb_param_ring_register
+# ** Warning: G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv(39): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	tb_param_ring_register
+# End time: 21:52:30 on Oct 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_param_ring_register
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_param_ring_register 
+# Start time: 21:52:30 on Oct 20,2025
+# Loading sv_std.std
+# Loading work.tb_param_ring_register
+# Loading work.param_ring_register
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 30 | HOLD  | 000000000000000000 | 000000000000000000
+# Time | mode | input data | output data
+# 
+# Test 1:
+# 50 | LOAD  | 05a5a5a5a5a5a5a5a5 | 000000000000000000
+# 70 | LOAD  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 80 | LOAD  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 
+# Test 2: save mode
+# 90 | HOLD  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 110 | HOLD  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 120 | HOLD  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 
+# Test 3: ring shift left on 3 position
+# 130 | LEFT  | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 150 | LEFT  | 05a5a5a5a5a5a5a5a5 | 0b4b4b4b4b4b4b4b4a
+# 170 | LEFT  | 05a5a5a5a5a5a5a5a5 | 169696969696969694
+# 180 | LEFT  | 05a5a5a5a5a5a5a5a5 | 0d2d2d2d2d2d2d2d29
+# 
+# Test 4: ring shift right on 5 position
+# 190 | RIGHT | 05a5a5a5a5a5a5a5a5 | 0d2d2d2d2d2d2d2d29
+# 210 | RIGHT | 05a5a5a5a5a5a5a5a5 | 169696969696969694
+# 230 | RIGHT | 05a5a5a5a5a5a5a5a5 | 0b4b4b4b4b4b4b4b4a
+# 250 | RIGHT | 05a5a5a5a5a5a5a5a5 | 05a5a5a5a5a5a5a5a5
+# 270 | RIGHT | 05a5a5a5a5a5a5a5a5 | 12d2d2d2d2d2d2d2d2
+# 280 | RIGHT  | 05a5a5a5a5a5a5a5a5 | 096969696969696969
+# ** Note: $finish    : G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv(63)
+#    Time: 280 ps  Iteration: 0  Instance: /tb_param_ring_register
+# 1
+# Break in Module tb_param_ring_register at G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv line 63
+# End time: 21:56:43 on Oct 20,2025, Elapsed time: 0:04:13
+# Errors: 0, Warnings: 0

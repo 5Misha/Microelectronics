@@ -1,0 +1,96 @@
+# Reading pref.tcl
+# do labybka_3_test_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter {G:/Train_proj/labyba_3_1_counter/counter_1bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:50 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_1_counter" G:/Train_proj/labyba_3_1_counter/counter_1bit.sv 
+# -- Compiling module counter_1bit
+# 
+# Top level modules:
+# 	counter_1bit
+# End time: 11:17:51 on Oct 27,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter {G:/Train_proj/labyba_3_1_counter/counter_2bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:51 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_1_counter" G:/Train_proj/labyba_3_1_counter/counter_2bit.sv 
+# -- Compiling module counter_2bit
+# 
+# Top level modules:
+# 	counter_2bit
+# End time: 11:17:51 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter {G:/Train_proj/labyba_3_1_counter/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:51 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_1_counter" G:/Train_proj/labyba_3_1_counter/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:17:51 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter/src {G:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:17:52 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_1_counter/src" G:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv 
+# -- Compiling module tb_counter_2bit
+# 
+# Top level modules:
+# 	tb_counter_2bit
+# End time: 11:17:52 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_counter_2bit
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_counter_2bit 
+# Start time: 11:17:52 on Oct 27,2025
+# Loading sv_std.std
+# Loading work.tb_counter_2bit
+# Loading work.top
+# Loading work.counter_2bit
+# Loading work.counter_1bit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time	Tens	Units
+# 20	0	0
+# 25	0	1
+# 35	0	2
+# 45	0	3
+# 55	0	4
+# 65	0	5
+# 75	0	6
+# 85	0	7
+# 95	0	8
+# 105	0	9
+# 115	1	0
+# 125	1	1
+# 135	1	2
+# 140	0	0
+# 155	0	1
+# 165	0	2
+# 175	0	3
+# 185	0	4
+# 195	0	5
+# 205	0	6
+# 215	0	7
+# 225	0	8
+# 235	0	9
+# 245	1	0
+# End time: 12:03:50 on Oct 27,2025, Elapsed time: 0:45:58
+# Errors: 0, Warnings: 0

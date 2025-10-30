@@ -1,0 +1,18 @@
+module counter_1bit(
+	input logic clk, _rst, 
+	output logic [3:0] Q,
+	output logic carry_out
+);
+
+always_ff @(posedge clk, negedge _rst) begin
+	if (!_rst)
+		Q <= 0;
+	else if (Q < 9)
+		Q <= Q + 1'b1;
+	else
+		Q <= 0;
+end
+
+assign carry_out = (Q >= 9);
+
+endmodule 

@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+F:/intelFPGA_lite/Train_proj/labyba_3_2 {F:/intelFPGA_lite/Train_proj/labyba_3_2/counter_1bit.sv}
+vlog -sv -work work +incdir+F:/intelFPGA_lite/Train_proj/labyba_3_2 {F:/intelFPGA_lite/Train_proj/labyba_3_2/counter_2bit_60.sv}
+vlog -sv -work work +incdir+F:/intelFPGA_lite/Train_proj/labyba_3_2 {F:/intelFPGA_lite/Train_proj/labyba_3_2/top.sv}
+

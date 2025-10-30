@@ -1,0 +1,94 @@
+# Reading pref.tcl
+# do labyba_2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/laba_2 {E:/Quartuz_2.0/Zadaniya/laba_2/selector_8_32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:39 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/laba_2" E:/Quartuz_2.0/Zadaniya/laba_2/selector_8_32.sv 
+# -- Compiling module selector_8_32
+# 
+# Top level modules:
+# 	selector_8_32
+# End time: 17:07:39 on Oct 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/laba_2 {E:/Quartuz_2.0/Zadaniya/laba_2/top_selector_8_32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:39 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/laba_2" E:/Quartuz_2.0/Zadaniya/laba_2/top_selector_8_32.sv 
+# -- Compiling module top_selector_8_32
+# 
+# Top level modules:
+# 	top_selector_8_32
+# End time: 17:07:39 on Oct 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/laba_2/src {E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:39 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/laba_2/src" E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv 
+# -- Compiling module tb_selector_8_32
+# 
+# Top level modules:
+# 	tb_selector_8_32
+# End time: 17:07:40 on Oct 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_selector_8_32
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_selector_8_32 
+# Start time: 17:07:40 on Oct 14,2025
+# Loading sv_std.std
+# Loading work.tb_selector_8_32
+# Loading work.top_selector_8_32
+# Loading work.selector_8_32
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Start test
+# x[0]=00000001 x[1]=00000010 x[2]=00000100 x[3]=00001000 x[4]=00010000 x[5]=00100000 x[6]=01000000 x[7]=10000000
+#                    0 s = 000 | y = 00000001
+#                   10 s = 001 | y = 00000010
+#                   20 s = 010 | y = 00000100
+#                   30 s = 011 | y = 00001000
+#                   40 s = 100 | y = 00010000
+#                   50 s = 101 | y = 00100000
+#                   60 s = 110 | y = 01000000
+#                   70 s = 111 | y = 10000000
+# ** Note: $stop    : E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv(33)
+#    Time: 100 ns  Iteration: 0  Instance: /tb_selector_8_32
+# Break in Module tb_selector_8_32 at E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv line 33
+add wave -position end  sim:/tb_selector_8_32/xt
+
+restart -force
+run -all
+# GetModuleFileName: Не найден указанный модуль.
+# 
+# 
+# Start test
+# x[0]=00000001 x[1]=00000010 x[2]=00000100 x[3]=00001000 x[4]=00010000 x[5]=00100000 x[6]=01000000 x[7]=10000000
+#                    0 s = 000 | y = 00000001
+#                   10 s = 001 | y = 00000010
+#                   20 s = 010 | y = 00000100
+#                   30 s = 011 | y = 00001000
+#                   40 s = 100 | y = 00010000
+#                   50 s = 101 | y = 00100000
+#                   60 s = 110 | y = 01000000
+#                   70 s = 111 | y = 10000000
+# ** Note: $stop    : E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv(33)
+#    Time: 100 ns  Iteration: 0  Instance: /tb_selector_8_32
+# Break in Module tb_selector_8_32 at E:/Quartuz_2.0/Zadaniya/laba_2/src/tb_selector_8_32.sv line 33
+restart
+# End time: 17:12:55 on Oct 14,2025, Elapsed time: 0:05:15
+# Errors: 0, Warnings: 0

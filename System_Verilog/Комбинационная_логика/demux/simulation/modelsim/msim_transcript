@@ -1,0 +1,80 @@
+# Reading pref.tcl
+# do demux_1_3_16_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/DZ_2 {E:/Quartuz_2.0/Zadaniya/DZ_2/demux_if.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:09 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/DZ_2" E:/Quartuz_2.0/Zadaniya/DZ_2/demux_if.sv 
+# -- Compiling module demux_if
+# 
+# Top level modules:
+# 	demux_if
+# End time: 16:42:09 on Oct 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/DZ_2 {E:/Quartuz_2.0/Zadaniya/DZ_2/demux_case.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:09 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/DZ_2" E:/Quartuz_2.0/Zadaniya/DZ_2/demux_case.sv 
+# -- Compiling module demux_case
+# 
+# Top level modules:
+# 	demux_case
+# End time: 16:42:10 on Oct 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/DZ_2 {E:/Quartuz_2.0/Zadaniya/DZ_2/top_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:10 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/DZ_2" E:/Quartuz_2.0/Zadaniya/DZ_2/top_demux.sv 
+# -- Compiling module top_demux
+# 
+# Top level modules:
+# 	top_demux
+# End time: 16:42:10 on Oct 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/Quartuz_2.0/Zadaniya/DZ_2 {E:/Quartuz_2.0/Zadaniya/DZ_2/tb_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:10 on Oct 14,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Quartuz_2.0/Zadaniya/DZ_2" E:/Quartuz_2.0/Zadaniya/DZ_2/tb_demux.sv 
+# -- Compiling module tb_demux
+# 
+# Top level modules:
+# 	tb_demux
+# End time: 16:42:10 on Oct 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_demux
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_demux 
+# Start time: 16:42:10 on Oct 14,2025
+# Loading sv_std.std
+# Loading work.tb_demux
+# Loading work.top_demux
+# Loading work.demux_if
+# Loading work.demux_case
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Start test
+#                    0 s = 10 and x = 432f and y1_if = 0000, y2_if = 0000, y3_if = 432f, y1_case = 0000, y2_case = 0000, y3_case = 432f
+#                   10 s = 01 and x = 322a and y1_if = 0000, y2_if = 322a, y3_if = 0000, y1_case = 0000, y2_case = 322a, y3_case = 0000
+#                   20 s = 10 and x = 1011 and y1_if = 0000, y2_if = 0000, y3_if = 1011, y1_case = 0000, y2_case = 0000, y3_case = 1011
+#                   30 s = 11 and x = abcd and y1_if = 0000, y2_if = 0000, y3_if = 0000, y1_case = 0000, y2_case = 0000, y3_case = 0000
+#                   40 s = 00 and x = 010c and y1_if = 010c, y2_if = 0000, y3_if = 0000, y1_case = 010c, y2_case = 0000, y3_case = 0000
+# ** Note: $stop    : E:/Quartuz_2.0/Zadaniya/DZ_2/tb_demux.sv(30)
+#    Time: 60 ns  Iteration: 0  Instance: /tb_demux
+# Break in Module tb_demux at E:/Quartuz_2.0/Zadaniya/DZ_2/tb_demux.sv line 30
+# End time: 16:59:52 on Oct 14,2025, Elapsed time: 0:17:42
+# Errors: 0, Warnings: 0

@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Train_proj/labyba_3_4/simulation/modelsim
+vparam_ring_register
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1760986350
+!i10b 1
+!s100 M@R?:T3b<CGmLFTLYB<>E2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IC]e@9]V;Z9D`2PnnMi<ci3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1760982460
+8G:/Train_proj/labyba_3_4/param_ring_register.sv
+FG:/Train_proj/labyba_3_4/param_ring_register.sv
+!i122 0
+L0 1 25
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1760986349.000000
+!s107 G:/Train_proj/labyba_3_4/param_ring_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_4|G:/Train_proj/labyba_3_4/param_ring_register.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+G:/Train_proj/labyba_3_4
+Z8 tCvgOpt 0
+vtb_param_ring_register
+R1
+R2
+!i10b 1
+!s100 7KZK]o`d=`<z^11a=cd`D2
+R3
+I<:e]^YCgMdBWJ:<Hk[;7P1
+R4
+S1
+R0
+w1760986338
+8G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv
+FG:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv
+!i122 2
+L0 1 78
+R5
+r1
+!s85 0
+31
+Z9 !s108 1760986350.000000
+!s107 G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_4/src|G:/Train_proj/labyba_3_4/src/tb_param_ring_register.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+G:/Train_proj/labyba_3_4/src
+R8
+vtop
+R1
+R2
+!i10b 1
+!s100 gjgl=SGWb;d9TSG:ZH0Ne0
+R3
+Ib[^UWb:E?3oi_]:kJla]e2
+R4
+S1
+R0
+w1760982774
+8G:/Train_proj/labyba_3_4/top.sv
+FG:/Train_proj/labyba_3_4/top.sv
+!i122 1
+L0 1 15
+R5
+r1
+!s85 0
+31
+R9
+!s107 G:/Train_proj/labyba_3_4/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_4|G:/Train_proj/labyba_3_4/top.sv|
+!i113 1
+R6
+R7
+R8

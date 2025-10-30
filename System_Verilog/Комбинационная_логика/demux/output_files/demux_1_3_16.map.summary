@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 14 16:39:44 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : demux_1_3_16
+Top-level Entity Name : top_demux
+Family : Cyclone IV E
+Total logic elements : 48
+    Total combinational functions : 48
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 114
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Train_proj/labyba_3_5_antidrebezg/simulation/modelsim
+vdebounce_counter
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1761221267
+!i10b 1
+!s100 kV_GSkU=B`UO?i@iCF0dc0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5_LD57XC5J8jTI^McA`CT1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1761221244
+8E:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv
+FE:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv
+!i122 0
+L0 2 44
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1761221267.000000
+!s107 E:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Train_proj/labyba_3_5_antidrebezg|E:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+E:/Train_proj/labyba_3_5_antidrebezg
+Z7 tCvgOpt 0
+vdebounce_tb
+R1
+!s110 1761221268
+!i10b 1
+!s100 B8RZA`514Q1cYRPh31ZIS3
+R2
+I8jI9DQ2a2EQk>3hc;iJWd2
+R3
+S1
+R0
+w1761221214
+8E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv
+FE:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv
+!i122 1
+L0 1 65
+R4
+r1
+!s85 0
+31
+!s108 1761221268.000000
+!s107 E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Train_proj/labyba_3_5_antidrebezg|E:/Train_proj/labyba_3_5_antidrebezg/debounce_tb.sv|
+!i113 1
+R5
+R6
+R7

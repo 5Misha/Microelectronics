@@ -1,0 +1,148 @@
+# Reading pref.tcl
+# do zadanie_2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_2_counter_60 {G:/Train_proj/labyba_3_2_counter_60/counter_1bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:08:49 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_2_counter_60" G:/Train_proj/labyba_3_2_counter_60/counter_1bit.sv 
+# -- Compiling module counter_1bit
+# 
+# Top level modules:
+# 	counter_1bit
+# End time: 12:08:49 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_2_counter_60 {G:/Train_proj/labyba_3_2_counter_60/counter_2bit_60.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:08:49 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_2_counter_60" G:/Train_proj/labyba_3_2_counter_60/counter_2bit_60.sv 
+# -- Compiling module counter_2bit_60
+# 
+# Top level modules:
+# 	counter_2bit_60
+# End time: 12:08:50 on Oct 27,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_2_counter_60 {G:/Train_proj/labyba_3_2_counter_60/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:08:50 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_2_counter_60" G:/Train_proj/labyba_3_2_counter_60/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:08:50 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/labyba_3_2_counter_60/csv {G:/Train_proj/labyba_3_2_counter_60/csv/tb_counter_2bit_60.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:08:50 on Oct 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/labyba_3_2_counter_60/csv" G:/Train_proj/labyba_3_2_counter_60/csv/tb_counter_2bit_60.sv 
+# -- Compiling module tb_counter_2bit_60
+# 
+# Top level modules:
+# 	tb_counter_2bit_60
+# End time: 12:08:50 on Oct 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_counter_2bit_60
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_counter_2bit_60 
+# Start time: 12:08:50 on Oct 27,2025
+# Loading sv_std.std
+# Loading work.tb_counter_2bit_60
+# Loading work.top
+# Loading work.counter_2bit_60
+# Loading work.counter_1bit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time	Tens	Units
+# 20	0	0
+# 25	0	1
+# 35	0	2
+# 45	0	3
+# 55	0	4
+# 65	0	5
+# 75	0	6
+# 85	0	7
+# 95	0	8
+# 105	0	9
+# 115	1	0
+# 125	1	1
+# 135	1	2
+# 145	1	3
+# 155	1	4
+# 165	1	5
+# 175	1	6
+# 185	1	7
+# 195	1	8
+# 205	1	9
+# 215	2	0
+# 225	2	1
+# 235	2	2
+# 245	2	3
+# 255	2	4
+# 265	2	5
+# 275	2	6
+# 285	2	7
+# 295	2	8
+# 305	2	9
+# 315	3	0
+# 325	3	1
+# 335	3	2
+# 345	3	3
+# 355	3	4
+# 365	3	5
+# 375	3	6
+# 385	3	7
+# 395	3	8
+# 405	3	9
+# 415	4	0
+# 425	4	1
+# 435	4	2
+# 445	4	3
+# 455	4	4
+# 465	4	5
+# 475	4	6
+# 485	4	7
+# 495	4	8
+# 505	4	9
+# 515	5	0
+# 525	5	1
+# 535	5	2
+# 545	5	3
+# 555	5	4
+# 565	5	5
+# 575	5	6
+# 585	5	7
+# 595	5	8
+# 605	5	9
+# 615	0	0
+# 625	0	1
+# 635	0	2
+# 645	0	3
+# 655	0	4
+# 665	0	5
+# 670	0	0
+# 695	0	1
+# 705	0	2
+# 715	0	3
+# 725	0	4
+# Simulation completed
+# ** Note: $finish    : G:/Train_proj/labyba_3_2_counter_60/csv/tb_counter_2bit_60.sv(36)
+#    Time: 730 ns  Iteration: 0  Instance: /tb_counter_2bit_60
+# 1
+# Break in Module tb_counter_2bit_60 at G:/Train_proj/labyba_3_2_counter_60/csv/tb_counter_2bit_60.sv line 36
+# End time: 12:09:50 on Oct 27,2025, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0

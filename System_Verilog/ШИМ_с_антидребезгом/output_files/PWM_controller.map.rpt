@@ -1,0 +1,402 @@
+Analysis & Synthesis report for PWM_controller
+Mon Oct 27 20:46:25 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |pwm_controller
+ 13. Parameter Settings for User Entity Instance: debounce_counter:debounce_up
+ 14. Parameter Settings for User Entity Instance: debounce_counter:debounce_down
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 27 20:46:25 2025       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; PWM_controller                              ;
+; Top-level Entity Name              ; pwm_controller                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 149                                         ;
+;     Total combinational functions  ; 143                                         ;
+;     Dedicated logic registers      ; 69                                          ;
+; Total registers                    ; 69                                          ;
+; Total pins                         ; 5                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; pwm_controller     ; PWM_controller     ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                          ; File Name with Absolute Path                             ; Library ;
++----------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+; pwm_controller.sv                                        ; yes             ; User SystemVerilog HDL File        ; G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv           ;         ;
+; G:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv ; yes             ; Auto-Found SystemVerilog HDL File  ; G:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv ;         ;
++----------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 149       ;
+;                                             ;           ;
+; Total combinational functions               ; 143       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 43        ;
+;     -- 3 input functions                    ; 28        ;
+;     -- <=2 input functions                  ; 72        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 99        ;
+;     -- arithmetic mode                      ; 44        ;
+;                                             ;           ;
+; Total registers                             ; 69        ;
+;     -- Dedicated logic registers            ; 69        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 5         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 105       ;
+; Total fan-out                               ; 684       ;
+; Average fan-out                             ; 3.08      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name      ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+------------------+--------------+
+; |pwm_controller                     ; 143 (103)           ; 69 (35)                   ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |pwm_controller                                ; pwm_controller   ; work         ;
+;    |debounce_counter:debounce_down| ; 20 (20)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwm_controller|debounce_counter:debounce_down ; debounce_counter ; work         ;
+;    |debounce_counter:debounce_up|   ; 20 (20)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwm_controller|debounce_counter:debounce_up   ; debounce_counter ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; duty_cycle_value[0..2]                ; Stuck at GND due to stuck port data_in ;
+; duty_cycle_value[7]                   ; Merged with duty_cycle_value[3]        ;
+; Total Number of Removed Registers = 4 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 69    ;
+; Number of registers using Synchronous Clear  ; 44    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 69    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; duty_cycle_index[2]                    ; 14      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |pwm_controller|duty_cycle_index[0]                        ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pwm_controller|debounce_counter:debounce_up|counter[1]    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pwm_controller|debounce_counter:debounce_down|counter[13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |pwm_controller ;
++----------------+----------+----------------------------------------------------+
+; Parameter Name ; Value    ; Type                                               ;
++----------------+----------+----------------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                                     ;
+; PWM_FREQ       ; 1000     ; Signed Integer                                     ;
+; COUNTER_MAX    ; 50000    ; Signed Integer                                     ;
++----------------+----------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce_counter:debounce_up ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; COUNTER_WIDTH  ; 14    ; Signed Integer                                   ;
+; COUNTER_MAX    ; 10000 ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce_counter:debounce_down ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; COUNTER_WIDTH  ; 14    ; Signed Integer                                     ;
+; COUNTER_MAX    ; 10000 ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 69                          ;
+;     CLR               ; 23                          ;
+;     CLR SCLR          ; 16                          ;
+;     ENA CLR           ; 2                           ;
+;     ENA CLR SCLR      ; 28                          ;
+; cycloneiii_lcell_comb ; 143                         ;
+;     arith             ; 44                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 99                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 43                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 4.14                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon Oct 27 20:46:18 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM_controller -c PWM_controller
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file pwm_controller.sv
+    Info (12023): Found entity 1: debounce_counter File: G:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv Line: 2
+    Info (12023): Found entity 2: pwm_controller File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 3
+Info (12127): Elaborating entity "pwm_controller" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(26): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(27): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(28): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(29): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(30): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(31): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(32): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(33): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at pwm_controller.sv(34): truncated value with size 32 to match size of target (16) File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 34
+Warning (10030): Net "duty_cycles.data_a" at pwm_controller.sv(22) has no driver or initial value, using a default initial value '0' File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 22
+Warning (10030): Net "duty_cycles.waddr_a" at pwm_controller.sv(22) has no driver or initial value, using a default initial value '0' File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 22
+Warning (10030): Net "duty_cycles.we_a" at pwm_controller.sv(22) has no driver or initial value, using a default initial value '0' File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 22
+Info (12128): Elaborating entity "debounce_counter" for hierarchy "debounce_counter:debounce_up" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at debounce_counter.sv(40): truncated value with size 32 to match size of target (14) File: G:/Train_proj/labyba_3_5_antidrebezg/debounce_counter.sv Line: 40
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "duty_cycles" is uninferred due to inappropriate RAM size File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 22
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (9) in the Memory Initialization File "G:/Train_proj/labyba_3_6_PWM/db/PWM_controller.ram0_pwm_controller_9d759852.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (13000): Registers with preset signals will power-up high File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "duty_cycle_value[15]" is converted into an equivalent circuit using register "duty_cycle_value[15]~_emulated" and latch "duty_cycle_value[15]~1" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[14]" is converted into an equivalent circuit using register "duty_cycle_value[14]~_emulated" and latch "duty_cycle_value[14]~5" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[13]" is converted into an equivalent circuit using register "duty_cycle_value[13]~_emulated" and latch "duty_cycle_value[13]~9" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[12]" is converted into an equivalent circuit using register "duty_cycle_value[12]~_emulated" and latch "duty_cycle_value[12]~13" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[11]" is converted into an equivalent circuit using register "duty_cycle_value[11]~_emulated" and latch "duty_cycle_value[11]~17" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[10]" is converted into an equivalent circuit using register "duty_cycle_value[10]~_emulated" and latch "duty_cycle_value[10]~21" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[9]" is converted into an equivalent circuit using register "duty_cycle_value[9]~_emulated" and latch "duty_cycle_value[9]~25" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[8]" is converted into an equivalent circuit using register "duty_cycle_value[8]~_emulated" and latch "duty_cycle_value[8]~29" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[3]" is converted into an equivalent circuit using register "duty_cycle_value[3]~_emulated" and latch "duty_cycle_value[3]~33" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[6]" is converted into an equivalent circuit using register "duty_cycle_value[6]~_emulated" and latch "duty_cycle_value[6]~37" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[5]" is converted into an equivalent circuit using register "duty_cycle_value[5]~_emulated" and latch "duty_cycle_value[5]~41" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+    Warning (13310): Register "duty_cycle_value[4]" is converted into an equivalent circuit using register "duty_cycle_value[4]~_emulated" and latch "duty_cycle_value[4]~45" File: G:/Train_proj/labyba_3_6_PWM/pwm_controller.sv Line: 76
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 154 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 149 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Mon Oct 27 20:46:25 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
+
+

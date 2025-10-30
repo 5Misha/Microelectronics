@@ -1,0 +1,37 @@
+
+`timescale 1ns / 1ps
+
+module tb_counter_2bit;
+
+logic clk_t, _rst_t;
+logic [7:0] Q_t;
+
+top DUT ( .clk(clk_t), ._rst(_rst_t), Q(Q_t) );
+
+// Генератор тактового сигнала
+initial begin
+    clk = 0;
+    forever #5 clk = ~clk;  // Период 10 единиц времени
+end
+
+// Тестовые воздействия
+initial begin
+    // Инициализация
+    _rst = 1;
+    
+    // Логирование
+    $display("Time\tTens\tUnits");
+    $monitor("%0d\t%0d\t%0d", $time, Q[7:4], Q[3:0]);
+    
+    // Сброс
+    #15 _rst = 0;
+    #20 _rst = 1;  // ВАЖНО: снимаем сброс!
+    
+    // Запускаем на несколько циклов
+    #500;  // Увеличим время симуляции
+    
+    $display("Simulation finished");
+    $finish;  // ВАЖНО: завершаем симуляцию
+end
+
+endmodule

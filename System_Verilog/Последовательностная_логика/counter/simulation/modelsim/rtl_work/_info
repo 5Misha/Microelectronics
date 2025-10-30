@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Train_proj/labyba_3_1_counter/simulation/modelsim
+vcounter_1bit
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1761553071
+!i10b 1
+!s100 mgzH@>kIR`m09NCCPenNE3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]`o=jaiNYAdH1EVPm:bAa0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1760777898
+8G:/Train_proj/labyba_3_1_counter/counter_1bit.sv
+FG:/Train_proj/labyba_3_1_counter/counter_1bit.sv
+!i122 0
+L0 1 18
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1761553070.000000
+!s107 G:/Train_proj/labyba_3_1_counter/counter_1bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_1_counter|G:/Train_proj/labyba_3_1_counter/counter_1bit.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter
+Z8 tCvgOpt 0
+vcounter_2bit
+R1
+R2
+!i10b 1
+!s100 1`FM9GT1?UBcKkHOoBcY>3
+R3
+I>oOW3k3=AM8Q^43_M6n1b3
+R4
+S1
+R0
+w1760782752
+8G:/Train_proj/labyba_3_1_counter/counter_2bit.sv
+FG:/Train_proj/labyba_3_1_counter/counter_2bit.sv
+!i122 1
+L0 1 37
+R5
+r1
+!s85 0
+31
+Z9 !s108 1761553071.000000
+!s107 G:/Train_proj/labyba_3_1_counter/counter_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_1_counter|G:/Train_proj/labyba_3_1_counter/counter_2bit.sv|
+!i113 1
+R6
+R7
+R8
+vtb_counter_2bit
+R1
+!s110 1761553072
+!i10b 1
+!s100 oEOSNm`I^Kim`>kQE3M3e1
+R3
+In^1`S23GjBW_Jb@]>Hg@G2
+R4
+S1
+R0
+w1760777612
+8G:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv
+FG:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv
+!i122 3
+L0 4 31
+R5
+r1
+!s85 0
+31
+!s108 1761553072.000000
+!s107 G:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_1_counter/src|G:/Train_proj/labyba_3_1_counter/src/tb_counter_2bit.sv|
+!i113 1
+R6
+!s92 -sv -work work +incdir+G:/Train_proj/labyba_3_1_counter/src
+R8
+vtop
+R1
+R2
+!i10b 1
+!s100 UlLD14WJhTaJ_P@;KLdHZ3
+R3
+I1AV4ZzP@;5]IPLm[5IEP12
+R4
+S1
+R0
+w1760642004
+8G:/Train_proj/labyba_3_1_counter/top.sv
+FG:/Train_proj/labyba_3_1_counter/top.sv
+!i122 2
+L0 1 13
+R5
+r1
+!s85 0
+31
+R9
+!s107 G:/Train_proj/labyba_3_1_counter/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_1_counter|G:/Train_proj/labyba_3_1_counter/top.sv|
+!i113 1
+R6
+R7
+R8
