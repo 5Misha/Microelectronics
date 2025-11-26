@@ -4,7 +4,7 @@
 
 Вот краткий список решенных задач, на которые можно посмотреть:  
 * [**РСЛОС - регистр с линейной обратной связью (Фибоначчи, Галуа)**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/РСЛОС)  
-* [**Поиск последовательности 01011 при помощи автомата Мура и Мили**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/Последовательность_01011_автоматы)  
+* [**Поиск последовательности 01011 при помощи автомата Мура**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/Последовательность_01011_автоматы)  
 * [**Реализация светофора с мигающим зеленым цветом в конце**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/Светофор_на_автоматах)  
 * [**ШИМ с регулированием кнопками отладочной платы яркости светодиода и с модулем антидребезга контактов**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/ШИМ_с_антидребезгом)  
 * [**Пищалка**](https://github.com/5Misha/Microelectronics/tree/main/System_Verilog/Пищалка)  
