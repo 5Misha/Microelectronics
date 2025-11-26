@@ -1,0 +1,40 @@
+module antidrebezg (
+	input logic clk, rst_n, button_in,
+	output logic button_out
+);
+
+parameter COUNTER_WIDTH = 15;
+parameter COUNTER_MAX = 32000;
+
+logic [COUNTER_WIDTH - 1 : 0] counter;
+logic button_sync;
+logic button_sync_delayed;
+
+// синхронизация кнопки с клоком
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) begin
+		button_sync <= 1'b0;
+		button_sync_delayed <= 1'b0;
+	end else begin
+		button_sync <= button_in;
+		button_sync_delayed <= button_sync;
+	end
+end
+
+
+// сам антидребезг
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) begin
+		counter <= '0;
+		button_out <= 1'b0;
+	end else begin
+		if (counter >= COUNTER_MAX)
+			button_out <= button_sync;
+		else if (button_sync != button_sync_delayed)
+			counter <= '0;
+		else
+			counter <= counter + '1;
+	end
+end
+	
+endmodule 

@@ -1,0 +1,142 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Train_proj/laba_4_on_5/simulation/modelsim
+vavtomat_01011_moore
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1764065234
+!i10b 1
+!s100 VIYDTnbbGfE;L`oe3lY233
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=We4lzbK7Qj9hml7mS^a?3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1764063356
+8G:/Train_proj/laba_4_on_5/avtomat_01011_moore.sv
+FG:/Train_proj/laba_4_on_5/avtomat_01011_moore.sv
+!i122 0
+L0 1 43
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1764065233.000000
+!s107 G:/Train_proj/laba_4_on_5/avtomat_01011_moore.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_on_5|G:/Train_proj/laba_4_on_5/avtomat_01011_moore.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+G:/Train_proj/laba_4_on_5
+Z8 tCvgOpt 0
+vrslos_fibonachi
+R1
+R2
+!i10b 1
+!s100 C@_>]=JEV?3mkjPa?<0<B3
+R3
+I5AHV]<SdV<8YcdMcLdcBk2
+R4
+S1
+R0
+w1764063892
+8G:/Train_proj/laba_4_on_5/rslos_fibonachi.sv
+FG:/Train_proj/laba_4_on_5/rslos_fibonachi.sv
+!i122 1
+L0 1 25
+R5
+r1
+!s85 0
+31
+Z9 !s108 1764065234.000000
+!s107 G:/Train_proj/laba_4_on_5/rslos_fibonachi.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_on_5|G:/Train_proj/laba_4_on_5/rslos_fibonachi.sv|
+!i113 1
+R6
+R7
+R8
+vtb_avtomat_01011
+R1
+DXx4 work 24 tb_avtomat_01011_sv_unit 0 22 JnK2?:8L?K55Lk<He_C7e1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 KeMPf3U1AY@3BK8fBOEZm2
+I3>kz5dcERe7OkRAdkZCd@1
+!s105 tb_avtomat_01011_sv_unit
+S1
+R0
+Z10 w1764065210
+Z11 8G:/Train_proj/laba_4_on_5/src/tb_avtomat_01011.sv
+Z12 FG:/Train_proj/laba_4_on_5/src/tb_avtomat_01011.sv
+!i122 3
+L0 3 54
+R5
+31
+R9
+!s107 G:/Train_proj/laba_4_on_5/src/tb_avtomat_01011.sv|
+Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_on_5/src|G:/Train_proj/laba_4_on_5/src/tb_avtomat_01011.sv|
+!i113 1
+R6
+Z14 !s92 -sv -work work +incdir+G:/Train_proj/laba_4_on_5/src
+R8
+Xtb_avtomat_01011_sv_unit
+R1
+R2
+VJnK2?:8L?K55Lk<He_C7e1
+r1
+!s85 0
+!i10b 1
+!s100 <L5Ij2jLa?[g7[AKTMHk>2
+IJnK2?:8L?K55Lk<He_C7e1
+!i103 1
+S1
+R0
+R10
+R11
+R12
+!i122 3
+L0 1 0
+R5
+31
+R9
+Z15 !s107 G:/Train_proj/laba_4_on_5/src/tb_avtomat_01011.sv|
+R13
+!i113 1
+R6
+R14
+R8
+vtop_avtomat_01011
+R1
+R2
+!i10b 1
+!s100 :BjVBFFe7m@ce]5_oC>eO2
+R3
+I_]8?ZL_6ll^Jn759RTZXO3
+R4
+S1
+R0
+w1764064148
+8G:/Train_proj/laba_4_on_5/top_avtomat_01011.sv
+FG:/Train_proj/laba_4_on_5/top_avtomat_01011.sv
+!i122 2
+L0 1 20
+R5
+r1
+!s85 0
+31
+R9
+!s107 G:/Train_proj/laba_4_on_5/top_avtomat_01011.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_on_5|G:/Train_proj/laba_4_on_5/top_avtomat_01011.sv|
+!i113 1
+R6
+R7
+R8

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 25 12:55:38 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : avtomat_1011_with_fibonachi
+Top-level Entity Name : top_avtomat_01011
+Family : Cyclone IV E
+Total logic elements : 18
+    Total combinational functions : 13
+    Dedicated logic registers : 18
+Total registers : 18
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

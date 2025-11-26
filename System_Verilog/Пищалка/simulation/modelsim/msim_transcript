@@ -1,0 +1,115 @@
+# Reading pref.tcl
+# do buzzer_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/Laba_3_on_3_buzzer {G:/Train_proj/Laba_3_on_3_buzzer/antidrebezg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:53:46 on Nov 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/Laba_3_on_3_buzzer" G:/Train_proj/Laba_3_on_3_buzzer/antidrebezg.sv 
+# -- Compiling module antidrebezg
+# 
+# Top level modules:
+# 	antidrebezg
+# End time: 08:53:46 on Nov 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/Laba_3_on_3_buzzer {G:/Train_proj/Laba_3_on_3_buzzer/buzzer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:53:46 on Nov 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/Laba_3_on_3_buzzer" G:/Train_proj/Laba_3_on_3_buzzer/buzzer.sv 
+# -- Compiling module buzzer
+# 
+# Top level modules:
+# 	buzzer
+# End time: 08:53:47 on Nov 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/Laba_3_on_3_buzzer {G:/Train_proj/Laba_3_on_3_buzzer/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:53:47 on Nov 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/Laba_3_on_3_buzzer" G:/Train_proj/Laba_3_on_3_buzzer/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 08:53:47 on Nov 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/Laba_3_on_3_buzzer/src {G:/Train_proj/Laba_3_on_3_buzzer/src/tb_buzzer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:53:47 on Nov 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/Laba_3_on_3_buzzer/src" G:/Train_proj/Laba_3_on_3_buzzer/src/tb_buzzer.sv 
+# -- Compiling module tb_buzzer
+# 
+# Top level modules:
+# 	tb_buzzer
+# End time: 08:53:47 on Nov 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_buzzer
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_buzzer 
+# Start time: 08:53:47 on Nov 01,2025
+# Loading sv_std.std
+# Loading work.tb_buzzer
+# Loading work.top
+# Loading work.buzzer
+# Loading work.antidrebezg
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# START TEST!
+# reset system
+#                   Time | RST | UP | DOWN | PWM 
+#                    0   |  0  | 0  |  0   |  0  
+#                 1000   |  1  | 0  |  0   |  0  
+# 2. PWM should work at 20 kHz
+#                26010   |  1  | 0  |  0   |  1  
+#                51030   |  1  | 0  |  0   |  0  
+#                76050   |  1  | 0  |  0   |  1  
+#               101070   |  1  | 0  |  0   |  0  
+# 3. testing operation at - 1khz 
+#               107000   |  1  | 0  |  1   |  0  
+#               108000   |  1  | 0  |  0   |  0  
+#               110000   |  1  | 0  |  1   |  0  
+#               111000   |  1  | 0  |  0   |  0  
+#               113000   |  1  | 0  |  1   |  0  
+#               114000   |  1  | 0  |  0   |  0  
+#               116000   |  1  | 0  |  1   |  0  
+#               117000   |  1  | 0  |  0   |  0  
+#               119000   |  1  | 0  |  1   |  0  
+#               120000   |  1  | 0  |  0   |  0  
+#               122000   |  1  | 0  |  1   |  0  
+#               123000   |  1  | 0  |  0   |  0  
+#               136790   |  1  | 0  |  0   |  1  
+#               172510   |  1  | 0  |  0   |  0  
+#               208230   |  1  | 0  |  0   |  1  
+# 3. testing operation at + 1khz 
+#               223000   |  1  | 1  |  0   |  1  
+#               224000   |  1  | 0  |  0   |  1  
+#               226000   |  1  | 1  |  0   |  1  
+#               227000   |  1  | 0  |  0   |  1  
+#               229000   |  1  | 1  |  0   |  1  
+#               230000   |  1  | 0  |  0   |  1  
+#               232000   |  1  | 1  |  0   |  1  
+#               233000   |  1  | 0  |  0   |  1  
+#               236010   |  1  | 0  |  0   |  0  
+#               263790   |  1  | 0  |  0   |  1  
+#               291570   |  1  | 0  |  0   |  0  
+#               319350   |  1  | 0  |  0   |  1  
+#               347130   |  1  | 0  |  0   |  0  
+#               374910   |  1  | 0  |  0   |  1  
+# ** Note: $stop    : G:/Train_proj/Laba_3_on_3_buzzer/src/tb_buzzer.sv(98)
+#    Time: 383 us  Iteration: 0  Instance: /tb_buzzer
+# Break in Module tb_buzzer at G:/Train_proj/Laba_3_on_3_buzzer/src/tb_buzzer.sv line 98
+# End time: 11:56:38 on Nov 01,2025, Elapsed time: 3:02:51
+# Errors: 0, Warnings: 0

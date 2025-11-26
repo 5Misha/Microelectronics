@@ -1,0 +1,98 @@
+|top
+clk => clk.IN1
+rst_n => rst_n.IN1
+btn_up => btn_up.IN1
+btn_down => btn_down.IN1
+pwm_out <= buzzer:buzzer_inst.pwm_out
+
+
+|top|buzzer:buzzer_inst
+clk => clk.IN2
+rst_n => rst_n.IN2
+btn_up => btn_up.IN1
+btn_down => btn_down.IN1
+pwm_out <= pwm_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|buzzer:buzzer_inst|antidrebezg:debounce_up
+clk => button_out~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => button_sync_delayed.CLK
+clk => button_sync.CLK
+rst_n => button_out~reg0.ACLR
+rst_n => counter[0].ACLR
+rst_n => counter[1].ACLR
+rst_n => counter[2].ACLR
+rst_n => counter[3].ACLR
+rst_n => counter[4].ACLR
+rst_n => counter[5].ACLR
+rst_n => counter[6].ACLR
+rst_n => counter[7].ACLR
+rst_n => counter[8].ACLR
+rst_n => counter[9].ACLR
+rst_n => counter[10].ACLR
+rst_n => counter[11].ACLR
+rst_n => counter[12].ACLR
+rst_n => counter[13].ACLR
+rst_n => counter[14].ACLR
+rst_n => button_sync_delayed.ACLR
+rst_n => button_sync.ACLR
+button_in => button_sync.DATAIN
+button_out <= button_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|buzzer:buzzer_inst|antidrebezg:debounce_down
+clk => button_out~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => button_sync_delayed.CLK
+clk => button_sync.CLK
+rst_n => button_out~reg0.ACLR
+rst_n => counter[0].ACLR
+rst_n => counter[1].ACLR
+rst_n => counter[2].ACLR
+rst_n => counter[3].ACLR
+rst_n => counter[4].ACLR
+rst_n => counter[5].ACLR
+rst_n => counter[6].ACLR
+rst_n => counter[7].ACLR
+rst_n => counter[8].ACLR
+rst_n => counter[9].ACLR
+rst_n => counter[10].ACLR
+rst_n => counter[11].ACLR
+rst_n => counter[12].ACLR
+rst_n => counter[13].ACLR
+rst_n => counter[14].ACLR
+rst_n => button_sync_delayed.ACLR
+rst_n => button_sync.ACLR
+button_in => button_sync.DATAIN
+button_out <= button_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,90 @@
+# Reading pref.tcl
+# do Reg_With_Lin_Rev_Chain_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS {G:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:44:08 on Nov 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_3_3_2_RSLOS" G:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv 
+# -- Compiling module rslos_fibonachi
+# 
+# Top level modules:
+# 	rslos_fibonachi
+# End time: 20:44:08 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS {G:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:44:08 on Nov 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_3_3_2_RSLOS" G:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv 
+# -- Compiling module rslos_galya
+# 
+# Top level modules:
+# 	rslos_galya
+# End time: 20:44:08 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS {G:/Train_proj/laba_3_3_2_RSLOS/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:44:08 on Nov 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_3_3_2_RSLOS" G:/Train_proj/laba_3_3_2_RSLOS/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 20:44:09 on Nov 20,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS/src {G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:44:09 on Nov 20,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_3_3_2_RSLOS/src" G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv 
+# -- Compiling module tb_rslos
+# 
+# Top level modules:
+# 	tb_rslos
+# End time: 20:44:09 on Nov 20,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_rslos
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_rslos 
+# Start time: 20:44:09 on Nov 20,2025
+# Loading sv_std.std
+# Loading work.tb_rslos
+# Loading work.top
+# Loading work.rslos_fibonachi
+# Loading work.rslos_galya
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# START TEST!
+# Reset system
+#                    0ns: rst = 1 | enable = 0 | random_out_f = 1010001011000001 | random_out_g = 1010001011000001
+#                   40ns: rst = 0 | enable = 0 | random_out_f = 1010001011000001 | random_out_g = 1010001011000001
+#                   90ns: rst = 0 | enable = 1 | random_out_f = 1101000101100000 | random_out_g = 0101100110010011
+#                  110ns: rst = 0 | enable = 1 | random_out_f = 0110100010110000 | random_out_g = 1011001100100110
+#                  130ns: rst = 0 | enable = 1 | random_out_f = 1011010001011000 | random_out_g = 0111101001011101
+#                  150ns: rst = 0 | enable = 1 | random_out_f = 0101101000101100 | random_out_g = 1111010010111010
+#                  170ns: rst = 0 | enable = 1 | random_out_f = 1010110100010110 | random_out_g = 1111010101100101
+#                  190ns: rst = 0 | enable = 1 | random_out_f = 0101011010001011 | random_out_g = 1111011011011011
+#                  210ns: rst = 0 | enable = 1 | random_out_f = 1010101101000101 | random_out_g = 1111000110100111
+#                  230ns: rst = 0 | enable = 1 | random_out_f = 0101010110100010 | random_out_g = 1111111101011111
+#                  250ns: rst = 0 | enable = 1 | random_out_f = 1010101011010001 | random_out_g = 1110001010101111
+#                  270ns: rst = 0 | enable = 1 | random_out_f = 0101010101101000 | random_out_g = 1101100101001111
+#                  290ns: rst = 0 | enable = 1 | random_out_f = 0010101010110100 | random_out_g = 1010111010001111
+#                  310ns: rst = 0 | enable = 1 | random_out_f = 0001010101011010 | random_out_g = 0100000100001111
+# ** Note: $stop    : G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv(31)
+#    Time: 320 ns  Iteration: 0  Instance: /tb_rslos
+# Break in Module tb_rslos at G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv line 31
+# End time: 21:21:29 on Nov 20,2025, Elapsed time: 0:37:20
+# Errors: 0, Warnings: 0

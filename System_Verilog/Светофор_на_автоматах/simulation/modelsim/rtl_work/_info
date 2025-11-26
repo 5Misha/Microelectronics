@@ -1,0 +1,142 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Train_proj/laba_4_4a/simulation/modelsim
+vfrequency_divider
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1763993647
+!i10b 1
+!s100 Fo8TJ=31@2hS^6YUFCE7E1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IDZ^=j69O8f;MlEQlhAdeP2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1763991704
+8G:/Train_proj/laba_4_4a/frequency_divider.sv
+FG:/Train_proj/laba_4_4a/frequency_divider.sv
+!i122 1
+Z5 L0 1 22
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1763993647.000000
+!s107 G:/Train_proj/laba_4_4a/frequency_divider.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_4a|G:/Train_proj/laba_4_4a/frequency_divider.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+G:/Train_proj/laba_4_4a
+Z10 tCvgOpt 0
+vtb_traffic_light
+R1
+DXx4 work 24 tb_traffic_light_sv_unit 0 22 8eNU6MOlLogZTnEQl4Njz2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 DCYP<P^NI?eabB?bDd[`i0
+IU;@dHn]1ADBYWCX[9W[[`1
+!s105 tb_traffic_light_sv_unit
+S1
+R0
+Z11 w1763803966
+Z12 8G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv
+Z13 FG:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv
+!i122 3
+L0 3 37
+R6
+31
+R7
+!s107 G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_4a/../laba_4_3/src|G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv|
+!i113 1
+R8
+Z15 !s92 -sv -work work +incdir+G:/Train_proj/laba_4_4a/../laba_4_3/src
+R10
+Xtb_traffic_light_sv_unit
+R1
+R2
+V8eNU6MOlLogZTnEQl4Njz2
+r1
+!s85 0
+!i10b 1
+!s100 ER3k@mAF>YH[?j0CfGL2U0
+I8eNU6MOlLogZTnEQl4Njz2
+!i103 1
+S1
+R0
+R11
+R12
+R13
+!i122 3
+L0 1 0
+R6
+31
+R7
+Z16 !s107 G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv|
+R14
+!i113 1
+R8
+R15
+R10
+vtraffic_light_blink
+R1
+R2
+!i10b 1
+!s100 JDY4J`A483j@?G5Hc7P@71
+R3
+InY^1JLQM<X>^<RThZjP7J1
+R4
+S1
+R0
+w1763993638
+8G:/Train_proj/laba_4_4a/traffic_light_blink.sv
+FG:/Train_proj/laba_4_4a/traffic_light_blink.sv
+!i122 0
+L0 1 91
+R6
+r1
+!s85 0
+31
+!s108 1763993646.000000
+!s107 G:/Train_proj/laba_4_4a/traffic_light_blink.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_4a|G:/Train_proj/laba_4_4a/traffic_light_blink.sv|
+!i113 1
+R8
+R9
+R10
+vtraffic_light_top
+R1
+R2
+!i10b 1
+!s100 z<MM?:`L;3S0iBleGkAA:1
+R3
+IXTRmPRloVi8me5N304K4D1
+R4
+S1
+R0
+w1763992582
+8G:/Train_proj/laba_4_4a/traffic_light_top.sv
+FG:/Train_proj/laba_4_4a/traffic_light_top.sv
+!i122 2
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 G:/Train_proj/laba_4_4a/traffic_light_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_4_4a|G:/Train_proj/laba_4_4a/traffic_light_top.sv|
+!i113 1
+R8
+R9
+R10

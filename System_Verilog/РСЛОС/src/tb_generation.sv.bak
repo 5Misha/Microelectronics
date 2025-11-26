@@ -1,0 +1,19 @@
+module tb_generation;
+
+int file; // переменная для хранения дескриптора файла
+initial begin
+	file = $fopen("Sequence.txt", "w");
+end
+
+//каждый фронт тактового синхросигнала записывать в файл  выходной сигнал с именем outPRS в бинарном формате
+always @(posedge clk) begin
+	$fdisplay(fd, "%b", outPRS) 
+end
+
+initial begin
+	repeat(10000) @(posedge clk);
+	$fclose(fd);
+	$stop;
+end
+
+endmodule

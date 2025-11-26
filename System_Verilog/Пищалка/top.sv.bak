@@ -1,0 +1,28 @@
+module top (
+    input  logic        clk,        // Тактовый сигнал платы
+    input  logic        rst_n,      // Кнопка сброса
+    input  logic        btn_up,     // Кнопка увеличения частоты
+    input  logic        btn_down,   // Кнопка уменьшения частоты
+    output logic        buzzer_out, // Выход на зуммер
+    output logic [7:0]  leds        // Светодиоды для индикации
+);
+
+    // Декларация сигналов
+    logic [15:0] current_freq;
+    
+    // Основной модуль пищалки
+    buzzer buzzer_inst (
+        .clk(clk),
+        .rst_n(rst_n),
+        .btn_up(btn_up),
+        .btn_down(btn_down),
+        .pwm_out(buzzer_out)
+    );
+    
+    // Индикация текущей частоты на светодиодах
+    always_comb begin
+        // Отображаем младшие 8 бит частоты на светодиодах
+        leds = buzzer_inst.target_freq[7:0];
+    end
+
+endmodule

@@ -1,0 +1,20 @@
+module top_avtomat_01011 (
+	input logic clk, rst_n, enable,
+	output logic y_moore, random_out
+);
+
+rslos_fibonachi U1(
+	.enable(1'b1),
+	.clk(clk),
+	.rst(!rst_n),
+	.random_out(random_out)
+);
+
+avtomat_01011_moore U2(
+	.x(random_out),
+	.clk(clk),
+	.rst_n(rst_n),
+	.y(y_moore)
+);
+
+endmodule

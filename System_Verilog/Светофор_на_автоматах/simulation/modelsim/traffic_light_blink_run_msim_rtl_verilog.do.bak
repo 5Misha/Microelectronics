@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/traffic_light_blink.sv}
+vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/frequency_divider.sv}
+vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/traffic_light_top.sv}
+

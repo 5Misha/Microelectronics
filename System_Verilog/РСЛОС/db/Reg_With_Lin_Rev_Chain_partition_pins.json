@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "random_out_f[0]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[1]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[2]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[3]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[4]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[5]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[6]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[7]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[8]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[9]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[10]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[11]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[12]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[13]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[14]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_f[15]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[8]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[9]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[10]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[11]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[12]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[13]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[14]",
+					"strict" : false
+				},
+				{
+					"name" : "random_out_g[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

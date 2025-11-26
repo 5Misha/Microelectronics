@@ -1,0 +1,16 @@
+module rslos_galya #(
+	parameter WIDTH = 16,
+	parameter START_BITS = 16'b1010_0010_1100_0001
+)(
+	input logic clk,
+	input logic rst,
+	input logic enable,
+	output logic [WIDTH-1 : 0] random_out
+);
+
+	logic [WIDTH-1 : 0] x;
+	logic bit_after_os;
+	
+
+	
+	

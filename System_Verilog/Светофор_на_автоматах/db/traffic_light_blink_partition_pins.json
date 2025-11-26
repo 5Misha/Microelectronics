@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "red_light",
+					"strict" : false
+				},
+				{
+					"name" : "yellow_light",
+					"strict" : false
+				},
+				{
+					"name" : "green_light",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50Mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,11 @@
+module top #(
+	input logic clk,
+	input logic rst,
+	input logic enable,
+	output logic [WIDTH-1 : 0] random_out_f, [WIDTH-1 : 0] random_out_g
+);
+
+rslos_fibonachi U1 ( .clk(clk), .rst(rst), .enable(enable), .random_out(random_out_f) );
+rslos_galya U2 ( .clk(clk), .rst(rst), .enable(enable), .random_out(random_out_g) );
+
+endmodule

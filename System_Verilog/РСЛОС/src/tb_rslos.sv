@@ -1,0 +1,42 @@
+`timescale 1ns / 1ps
+
+module tb_rslos;
+
+parameter WIDTH = 16;
+
+logic clk_t, rst_t, enable_t;
+logic [WIDTH-1 : 0] random_out_f_t, random_out_g_t;
+
+top DUT (.clk(clk_t), .rst(rst_t), .enable(enable_t), .random_out_f(random_out_f_t), .random_out_g(random_out_g_t));
+
+initial begin 
+	clk_t = 0;
+	forever # 10 clk_t = ~clk_t;
+end
+
+initial begin
+	rst_t = 1;
+	enable_t = 0;
+	#40;
+	
+	rst_t = 0;
+	#50;
+	
+	enable_t = 1;
+	#200;
+	
+	rst_t = 0;
+	#30;
+	
+	$stop;
+	
+end
+
+initial begin
+	$display("START TEST!");
+	$display("Reset system");
+	
+	$monitor($time, "ns: rst = %b | enable = %b | random_out_f = %b | random_out_g = %b", rst_t, enable_t, random_out_f_t, random_out_g_t);
+end
+
+endmodule

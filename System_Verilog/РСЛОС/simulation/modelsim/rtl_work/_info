@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Train_proj/laba_3_3_2_RSLOS/simulation/modelsim
+vrslos_fibonachi
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1763660648
+!i10b 1
+!s100 7WJWo[4Y>b?eChBd=aB_L3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IC[00[AzXJl5CKA7[V?On41
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1762368922
+8G:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv
+FG:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv
+!i122 0
+L0 1 25
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1763660648.000000
+!s107 G:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_3_3_2_RSLOS|G:/Train_proj/laba_3_3_2_RSLOS/rslos_fibonachi.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS
+Z9 tCvgOpt 0
+vrslos_galya
+R1
+R2
+!i10b 1
+!s100 JNHLh?Xk[0l[35nS>W8?P1
+R3
+IK4QXZ1UhmgOmil;Q847Nd0
+R4
+S1
+R0
+w1762867156
+8G:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv
+FG:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv
+!i122 1
+L0 1 42
+R5
+r1
+!s85 0
+31
+R6
+!s107 G:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_3_3_2_RSLOS|G:/Train_proj/laba_3_3_2_RSLOS/rslos_galya.sv|
+!i113 1
+R7
+R8
+R9
+vtb_rslos
+R1
+!s110 1763660649
+!i10b 1
+!s100 >4Azi4S_CXLa9C>XQF:g`0
+R3
+I@cJlT^BioQG`DJ?_6j_YB3
+R4
+S1
+R0
+w1762864928
+8G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv
+FG:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv
+!i122 3
+L0 3 40
+R5
+r1
+!s85 0
+31
+!s108 1763660649.000000
+!s107 G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_3_3_2_RSLOS/src|G:/Train_proj/laba_3_3_2_RSLOS/src/tb_rslos.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+G:/Train_proj/laba_3_3_2_RSLOS/src
+R9
+vtop
+R1
+R2
+!i10b 1
+!s100 :<;_VPBZPNWliZGG]:Td43
+R3
+IcObJ`_PRSJ0V408;4g9QA0
+R4
+S1
+R0
+w1762432590
+8G:/Train_proj/laba_3_3_2_RSLOS/top.sv
+FG:/Train_proj/laba_3_3_2_RSLOS/top.sv
+!i122 2
+L0 1 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 G:/Train_proj/laba_3_3_2_RSLOS/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/laba_3_3_2_RSLOS|G:/Train_proj/laba_3_3_2_RSLOS/top.sv|
+!i113 1
+R7
+R8
+R9

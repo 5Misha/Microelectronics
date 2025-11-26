@@ -1,0 +1,30 @@
+module buzzer (
+		input logic clk, rst_n, btn_up, btn_down,
+		output logic pwm_out
+)
+
+parameter CLK_FREG = 50_000_000;
+parameter MIN_FREG = 1_000;
+parameter MAX_FREG = 20_000;
+parameter DEFAULT_FREG = 1_000;
+
+logic [$clog2(CLK_FREG / MIN_FREG) : 0] count;
+logic [$clog2(CLK_FREG / MIN_FREG) : 0] target_freg; // текущая частота
+logic [$clog2(CLK_FREG / (MIN_FREG * 2)) : 0] half_period; // тк коэффициент заполнения 50 % то ШИМ будет работать на половину
+logic btn_up_sync, btn_down_sync;
+
+// антидребезг
+
+
+
+// синхронизируем входные кнопочки
+always_ff @(posedge clk, negedge rst_n) begin
+	if (!rst_n) begin
+		btn_up_sync <= 1'b0;
+		btn_down_sync <= 1'b0;
+	end else begin
+		btn_up_sync <= btn_up;
+		btn_down_sync <= btn_down;
+	end
+end
+

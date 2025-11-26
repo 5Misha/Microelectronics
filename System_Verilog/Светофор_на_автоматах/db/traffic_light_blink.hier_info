@@ -1,0 +1,42 @@
+|traffic_light_top
+clk_50Mhz => clk_50Mhz.IN1
+rst_n => rst_n.IN2
+red_light <= traffic_light_blink:U2.red_light
+yellow_light <= traffic_light_blink:U2.yellow_light
+green_light <= traffic_light_blink:U2.green_light
+
+
+|traffic_light_top|frequency_divider:U1
+clk_50Mhz => clk_1hz~reg0.CLK
+clk_50Mhz => cnt[0].CLK
+clk_50Mhz => cnt[1].CLK
+clk_50Mhz => cnt[2].CLK
+clk_50Mhz => cnt[3].CLK
+clk_50Mhz => cnt[4].CLK
+clk_50Mhz => cnt[5].CLK
+rst_n => clk_1hz~reg0.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+clk_1hz <= clk_1hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|traffic_light_top|traffic_light_blink:U2
+clk_1hz => green_blink.CLK
+clk_1hz => cnt[0].CLK
+clk_1hz => cnt[1].CLK
+clk_1hz => cnt[2].CLK
+clk_1hz => state~1.DATAIN
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => green_blink.ACLR
+rst_n => state~3.DATAIN
+red_light <= red_light.DB_MAX_OUTPUT_PORT_TYPE
+yellow_light <= yellow_light.DB_MAX_OUTPUT_PORT_TYPE
+green_light <= green_light.DB_MAX_OUTPUT_PORT_TYPE
+
+

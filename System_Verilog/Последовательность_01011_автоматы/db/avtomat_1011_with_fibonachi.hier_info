@@ -1,0 +1,63 @@
+|top_avtomat_01011
+clk => clk.IN2
+rst_n => rst_n.IN1
+enable => ~NO_FANOUT~
+y_moore << avtomat_01011_moore:U2.y
+random_out << random_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_avtomat_01011|rslos_fibonachi:U1
+enable => x[15].ENA
+enable => x[14].ENA
+enable => x[13].ENA
+enable => x[12].ENA
+enable => x[11].ENA
+enable => x[10].ENA
+enable => x[9].ENA
+enable => x[8].ENA
+enable => x[7].ENA
+enable => x[6].ENA
+enable => x[5].ENA
+enable => x[4].ENA
+enable => x[3].ENA
+clk => x[3].CLK
+clk => x[4].CLK
+clk => x[5].CLK
+clk => x[6].CLK
+clk => x[7].CLK
+clk => x[8].CLK
+clk => x[9].CLK
+clk => x[10].CLK
+clk => x[11].CLK
+clk => x[12].CLK
+clk => x[13].CLK
+clk => x[14].CLK
+clk => x[15].CLK
+rst => x[3].ACLR
+rst => x[4].ACLR
+rst => x[5].ACLR
+rst => x[6].PRESET
+rst => x[7].PRESET
+rst => x[8].ACLR
+rst => x[9].PRESET
+rst => x[10].ACLR
+rst => x[11].ACLR
+rst => x[12].ACLR
+rst => x[13].PRESET
+rst => x[14].ACLR
+rst => x[15].PRESET
+random_out <= x[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_avtomat_01011|avtomat_01011_moore:U2
+x => next_state.S2.DATAB
+x => next_state.S4.DATAB
+x => next_state.S5.DATAB
+x => Selector0.IN1
+x => Selector1.IN1
+x => Selector2.IN1
+clk => state~1.DATAIN
+rst_n => state~3.DATAIN
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

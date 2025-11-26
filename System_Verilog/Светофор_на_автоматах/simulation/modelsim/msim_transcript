@@ -1,0 +1,97 @@
+# Reading pref.tcl
+# do traffic_light_blink_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/traffic_light_blink.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:14:06 on Nov 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_4_4a" G:/Train_proj/laba_4_4a/traffic_light_blink.sv 
+# -- Compiling module traffic_light_blink
+# 
+# Top level modules:
+# 	traffic_light_blink
+# End time: 17:14:07 on Nov 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/frequency_divider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:14:07 on Nov 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_4_4a" G:/Train_proj/laba_4_4a/frequency_divider.sv 
+# -- Compiling module frequency_divider
+# 
+# Top level modules:
+# 	frequency_divider
+# End time: 17:14:07 on Nov 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a {G:/Train_proj/laba_4_4a/traffic_light_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:14:07 on Nov 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_4_4a" G:/Train_proj/laba_4_4a/traffic_light_top.sv 
+# -- Compiling module traffic_light_top
+# 
+# Top level modules:
+# 	traffic_light_top
+# End time: 17:14:07 on Nov 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+G:/Train_proj/laba_4_4a/../laba_4_3/src {G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:14:07 on Nov 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/Train_proj/laba_4_4a/../laba_4_3/src" G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv 
+# ** Warning: G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+# ** Warning: G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv(40): (vlog-2284) Empty $unit scope found.
+# -- Compiling package tb_traffic_light_sv_unit
+# -- Compiling module tb_traffic_light
+# 
+# Top level modules:
+# 	tb_traffic_light
+# End time: 17:14:07 on Nov 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_traffic_light
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_traffic_light 
+# Start time: 17:14:07 on Nov 24,2025
+# Loading sv_std.std
+# Loading work.tb_traffic_light_sv_unit
+# Loading work.tb_traffic_light
+# Loading work.traffic_light_top
+# Loading work.frequency_divider
+# Loading work.traffic_light_blink
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time: 0 ns | Red: 1 | Yellow: 0 | Green: 0
+# Time: 6535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 12535000 ns | Red: 0 | Yellow: 0 | Green: 0
+# Time: 13535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 14535000 ns | Red: 0 | Yellow: 0 | Green: 0
+# Time: 15535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 16535000 ns | Red: 0 | Yellow: 1 | Green: 0
+# Time: 18535000 ns | Red: 1 | Yellow: 0 | Green: 0
+# Time: 24535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 30535000 ns | Red: 0 | Yellow: 0 | Green: 0
+# Time: 31535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 32535000 ns | Red: 0 | Yellow: 0 | Green: 0
+# Time: 33535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 34535000 ns | Red: 0 | Yellow: 1 | Green: 0
+# Time: 36535000 ns | Red: 1 | Yellow: 0 | Green: 0
+# Time: 42535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# Time: 48535000 ns | Red: 0 | Yellow: 0 | Green: 0
+# Time: 49535000 ns | Red: 0 | Yellow: 0 | Green: 1
+# ** Note: $finish    : G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv(31)
+#    Time: 50040 ns  Iteration: 0  Instance: /tb_traffic_light
+# 1
+# Break in Module tb_traffic_light at G:/Train_proj/laba_4_4a/../laba_4_3/src/tb_traffic_light.sv line 31
+# End time: 17:16:18 on Nov 24,2025, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 0
