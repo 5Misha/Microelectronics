@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DIV_50Mhz_1hz
-Mon Oct 27 12:24:47 2025
+Sun Jan 25 12:34:40 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 27 12:24:47 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 25 12:34:40 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; DIV_50Mhz_1hz                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 6                                           ;
-;     Total combinational functions  ; 6                                           ;
-;     Dedicated logic registers      ; 5                                           ;
-; Total registers                    ; 5                                           ;
+; Total logic elements               ; 5                                           ;
+;     Total combinational functions  ; 5                                           ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
 ; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -165,46 +165,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; div_50M_1.sv                     ; yes             ; User SystemVerilog HDL File  ; G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File  ; G:/Train_proj/labyba_3_3_div_50Mhz/top.sv       ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; div_50M_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 6            ;
-;                                             ;              ;
-; Total combinational functions               ; 6            ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 1            ;
-;     -- 3 input functions                    ; 2            ;
-;     -- <=2 input functions                  ; 3            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 6            ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 5            ;
-;     -- Dedicated logic registers            ; 5            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 4            ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; clk_in~input ;
-; Maximum fan-out                             ; 5            ;
-; Total fan-out                               ; 35           ;
-; Average fan-out                             ; 1.84         ;
-+---------------------------------------------+--------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 5                     ;
+;                                             ;                       ;
+; Total combinational functions               ; 5                     ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 0                     ;
+;     -- 3 input functions                    ; 2                     ;
+;     -- <=2 input functions                  ; 3                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 5                     ;
+;     -- arithmetic mode                      ; 0                     ;
+;                                             ;                       ;
+; Total registers                             ; 4                     ;
+;     -- Dedicated logic registers            ; 4                     ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 4                     ;
+;                                             ;                       ;
+; Embedded Multiplier 9-bit elements          ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; div_50M_1:DUT|clk_out ;
+; Maximum fan-out                             ; 4                     ;
+; Total fan-out                               ; 28                    ;
+; Average fan-out                             ; 1.65                  ;
++---------------------------------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,8 +212,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |top                       ; 6 (0)               ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                ; top         ; work         ;
-;    |div_50M_1:DUT|         ; 6 (6)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|div_50M_1:DUT  ; div_50M_1   ; work         ;
+; |top                       ; 5 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                ; top         ; work         ;
+;    |div_50M_1:DUT|         ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|div_50M_1:DUT  ; div_50M_1   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -223,7 +223,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; div_50M_1:DUT|cnt[3]                  ; Stuck at GND due to stuck port data_in ;
+; div_50M_1:DUT|cnt[2]                  ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -233,10 +233,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -260,18 +260,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 5                           ;
-;     CLR               ; 4                           ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 3                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 6                           ;
-;     normal            ; 6                           ;
+; cycloneiii_lcell_comb ; 5                           ;
+;     normal            ; 5                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 2                           ;
-;         4 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.92                        ;
+; Average LUT depth     ; 0.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +279,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -290,27 +289,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 27 12:24:41 2025
+    Info: Processing started: Sun Jan 25 12:34:31 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DIV_50Mhz_1hz -c DIV_50Mhz_1hz
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file div_50m_1.sv
-    Info (12023): Found entity 1: div_50M_1 File: G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv Line: 1
+    Info (12023): Found entity 1: div_50M_1 File: C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: G:/Train_proj/labyba_3_3_div_50Mhz/top.sv Line: 1
+    Info (12023): Found entity 1: top File: C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "div_50M_1" for hierarchy "div_50M_1:DUT" File: G:/Train_proj/labyba_3_3_div_50Mhz/top.sv Line: 11
+Info (12128): Elaborating entity "div_50M_1" for hierarchy "div_50M_1:DUT" File: C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 6 logic cells
+    Info (21061): Implemented 5 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Mon Oct 27 12:24:48 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Jan 25 12:34:40 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:13
 
 

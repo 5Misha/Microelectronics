@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Oct 27 12:24:47 2025
+Analysis & Synthesis Status : Successful - Sun Jan 25 12:34:40 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DIV_50Mhz_1hz
 Top-level Entity Name : top
 Family : Cyclone IV E
-Total logic elements : 6
-    Total combinational functions : 6
-    Dedicated logic registers : 5
-Total registers : 5
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 4
+Total registers : 4
 Total pins : 4
 Total virtual pins : 0
 Total memory bits : 0

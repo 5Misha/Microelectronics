@@ -8,32 +8,32 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dG:/Train_proj/labyba_3_3_div_50Mhz/simulation/modelsim
+Z0 dC:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/simulation/modelsim
 vdiv_50M_1
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1761557146
+Z2 !s110 1769333961
 !i10b 1
-!s100 ;1[GAX4MHeJoOKFoS5cz^1
+!s100 db1C;gZY[@H@Z8PVng8nb3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ID8nIPoXf6zJl3_Qo6;X_K0
+IBi?zS76>?AZ=z0A6C@4PX2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1761557080
-8G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv
-FG:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv
+w1769333937
+8C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv
+FC:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv
 !i122 0
 L0 1 31
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1761557146.000000
-!s107 G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_3_div_50Mhz|G:/Train_proj/labyba_3_3_div_50Mhz/div_50M_1.sv|
+Z6 !s108 1769333961.000000
+!s107 C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz|C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/div_50M_1.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+G:/Train_proj/labyba_3_3_div_50Mhz
+Z8 !s92 -sv -work work +incdir+C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz
 Z9 tCvgOpt 0
 ndiv_50@m_1
 vtb_freq_divider
@@ -42,13 +42,13 @@ R2
 !i10b 1
 !s100 0B81]gnZ_7f_=zEk@Abnh3
 R3
-I:V^LZJ[Q0Cd3O:133c]k21
+IGfl3jjE67hkOj>Bj>;fQK1
 R4
 S1
 R0
 w1760866314
-8G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv
-FG:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv
+8C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src/tb_freq_divider.sv
+FC:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src/tb_freq_divider.sv
 !i122 2
 L0 1 36
 R5
@@ -56,11 +56,11 @@ r1
 !s85 0
 31
 R6
-!s107 G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_3_div_50Mhz/src|G:/Train_proj/labyba_3_3_div_50Mhz/src/tb_freq_divider.sv|
+!s107 C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src/tb_freq_divider.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src|C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src/tb_freq_divider.sv|
 !i113 1
 R7
-!s92 -sv -work work +incdir+G:/Train_proj/labyba_3_3_div_50Mhz/src
+!s92 -sv -work work +incdir+C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/src
 R9
 vtop
 R1
@@ -68,13 +68,13 @@ R2
 !i10b 1
 !s100 M3`6?W=Xjd@N9HTcemG9m0
 R3
-IKQI@:cW>U67Fck:MM@9Gk3
+I@fjh3=ZN2PndDOIUL@d`20
 R4
 S1
 R0
 w1760866096
-8G:/Train_proj/labyba_3_3_div_50Mhz/top.sv
-FG:/Train_proj/labyba_3_3_div_50Mhz/top.sv
+8C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv
+FC:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv
 !i122 1
 L0 1 12
 R5
@@ -82,8 +82,8 @@ r1
 !s85 0
 31
 R6
-!s107 G:/Train_proj/labyba_3_3_div_50Mhz/top.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+G:/Train_proj/labyba_3_3_div_50Mhz|G:/Train_proj/labyba_3_3_div_50Mhz/top.sv|
+!s107 C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz|C:/Users/zebra/OneDrive/Git_projects/Microelectronics/System_Verilog/Sequence_logic/div_50Mhz/top.sv|
 !i113 1
 R7
 R8

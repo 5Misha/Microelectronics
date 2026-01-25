@@ -3,9 +3,9 @@ module div_50M_1 #(parameter FREG_INPUT = 50_000_000,
 						(input logic clk_in, nrst,
 						 output logic clk_out, flag_out);
 
-localparam COUNT_MAX = FREG_INPUT / FREG_OUTPUT - 1;
+localparam COUNT_MAX = FREG_INPUT / FREG_OUTPUT / 2 - 1; // тк posedge clk_in, то нужно делить на 2
 
-logic [$clog2(COUNT_MAX + 1) : 0] cnt;
+logic [$clog2(COUNT_MAX + 1): 0] cnt;
 logic clk_out_penultimate; // задержка выходного сигнала
 
 always_ff @(posedge clk_in, negedge nrst)
